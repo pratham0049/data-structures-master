@@ -1,0 +1,25 @@
+		1. ArrayDS() constructor:
+	   - Time complexity: O(1)
+	   - Explanation: The constructor initializes the array with a capacity of 1, so it performs a constant number of operations regardless of the input size.
+	
+	2. getItem(int index) method:
+	   - Time complexity: O(1)
+	   - Explanation: Accessing an element by index in an array is a constant-time operation because arrays provide direct access to elements using their indices.
+	
+	3. push(Object item) method:
+	   - Time complexity: O(1) amortized
+	   - Explanation: In the worst case, when the array needs to be resized, `Arrays.copyOf` takes O(n) time, where n is the current capacity. However, resizing occurs infrequently and each resizing operation doubles the capacity, leading to an average time complexity of O(1) over multiple insertions.
+	
+	4. pop() method:
+	   - Time complexity: O(1)
+	   - Explanation: Removing the last element from the array is a constant-time operation because it only involves updating the length variable and optionally setting the last element to null.
+	
+	5. shiftIndex(int index) method:
+	   - Time complexity: O(n)
+	   - Explanation: Shifting elements to the left starting from the given index requires traversing the array from the index to the end, which takes linear time proportional to the number of elements shifted.
+	
+	6. delete(int index) method:
+	   - Time complexity: O(n)
+	   - Explanation: Deleting an element at a specific index involves two main operations: accessing the element at the index (O(1)) and shifting subsequent elements (O(n)) using the `shiftIndex` method.
+	
+	Overall, the performance of operations like `push`, `pop`, and `getItem` is generally efficient due to their constant-time or amortized constant-time complexities. However, methods involving element shifting (`shiftIndex` and `delete`) have a linear time complexity because they require iterating over elements in the worst case.

@@ -1,4 +1,4 @@
-		1. ArrayDS() constructor:
+	1. ArrayDS() constructor:
 	   - Time complexity: O(1)
 	   - Explanation: The constructor initializes the array with a capacity of 1, so it performs a constant number of operations regardless of the input size.
 	
